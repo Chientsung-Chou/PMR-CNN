@@ -1,0 +1,7 @@
+_BASE_: "Base-FSOD-C4.yaml"
+MODEL:
+  WEIGHTS: "./configs/R-101.pkl"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+OUTPUT_DIR: './output/pmmv2/R_101'
