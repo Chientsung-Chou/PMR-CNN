@@ -75,7 +75,7 @@ class DatasetMapperWithSupport:
             # support_df
             self.support_on = True
             if self.few_shot:
-                self.support_df = pd.read_pickle("./datasets/coco/10_shot_support_df.pkl")
+                self.support_df = pd.read_pickle("./datasets/coco/novel_10_shot_support_df.pkl")
                 # self.support_df = pd.read_pickle("./datasets/coco/all_10_shot_support_df.pkl")
             else:
                 self.support_df = pd.read_pickle("./datasets/coco/train_support_df.pkl")

@@ -357,7 +357,7 @@ class PMMsRCNNv2(nn.Module):
 
         support_file_name = os.path.join(support_dir, 'support_feature.pkl')
         if not os.path.exists(support_file_name):
-            support_path = './datasets/coco/10_shot_support_df.pkl'
+            support_path = './datasets/coco/novel_10_shot_support_df.pkl'
             support_df = pd.read_pickle(support_path)
 
             metadata = MetadataCatalog.get('coco_2017_train')
@@ -433,8 +433,8 @@ class PMMsRCNNv2(nn.Module):
         assert not self.training
 
         # visualization
-        file_names = [x["file_name"] for x in batched_inputs]
-        file_name = file_names[0]
+        # file_names = [x["file_name"] for x in batched_inputs]
+        # file_name = file_names[0]
 
         images = self.preprocess_image(batched_inputs)
         features = self.backbone(images.tensor)
@@ -500,14 +500,14 @@ class PMMsRCNNv2(nn.Module):
 
             # visulization
             # path = os.path.join('.' + file_name)
-            img = read_image(file_name, format="BGR")
-            visualizer = Visualizer(img, self.metadata, instance_mode=self.instance_mode)
-            vis_result = post_results[0]["instances"]
-            instances = vis_result.to(self.cpu_device)
-            vis_output = visualizer.draw_instance_predictions(predictions=instances)
-            image_name = file_name.rsplit('/',1)[1]
-            out_filename = './datasets/coco/10_support_output/'+ image_name
-            vis_output.save(out_filename)
+            # img = read_image(file_name, format="BGR")
+            # visualizer = Visualizer(img, self.metadata, instance_mode=self.instance_mode)
+            # vis_result = post_results[0]["instances"]
+            # instances = vis_result.to(self.cpu_device)
+            # vis_output = visualizer.draw_instance_predictions(predictions=instances)
+            # image_name = file_name.rsplit('/',1)[1]
+            # out_filename = './datasets/coco/10_support_output/'+ image_name
+            # vis_output.save(out_filename)
 
             return post_results
         else:

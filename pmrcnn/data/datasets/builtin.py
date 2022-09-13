@@ -10,7 +10,7 @@ _PREDEFINED_SPLITS_COCO["coco"] = {
     "coco_2017_train_nonvoc": ("/public/home/meijilin/dataset/coco2017/train2017",
                                "coco/new_annotations/base_instances_train2017.json"),
     "coco_2017_train_voc_10_shot": ("/public/home/meijilin/dataset/coco2017/train2017",
-                                    "coco/new_annotations/novel_instances_train2017.json"),
+                                    "coco/new_annotations/novel_10_shot_instances_train2017.json"),
 }
 
 
