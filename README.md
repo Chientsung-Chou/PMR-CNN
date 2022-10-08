@@ -1,6 +1,6 @@
 # PMR-CNN
 
-**PMR-CNN** is an open source implementation of our proposed methods Prototype Mixture R-CNN for Few-Shot Object Detection. This repo is built upon Attention RPN and based on Detectron2.
+**PMR-CNN** is an open source implementation of our proposed methods Prototype Mixture R-CNN for Few-Shot Object Detection. This repo is built upon [Attention RPN](https://github.com/fanq15/FewX) and based on Detectron2. Here is the [model_final.pth](https://drive.google.com/drive/folders/1CpJV0P6uETSGDM_BYZ0mAPetDGZ97LzS?usp=sharing) and put it into PMR-CNN/output.
 
 ## Requirements
 ```
