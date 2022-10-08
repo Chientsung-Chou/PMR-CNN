@@ -1,6 +1,6 @@
 # PMR-CNN
 
-**PMR-CNN** is an open source implementation of our proposed methods Prototype Mixture R-CNN for Few-Shot Object Detection. This repo is built upon [Attention RPN](https://github.com/fanq15/FewX) and based on Detectron2. Here is the [model_final.pth](https://drive.google.com/drive/folders/1CpJV0P6uETSGDM_BYZ0mAPetDGZ97LzS?usp=sharing) and put it into PMR-CNN/output.
+**PMR-CNN** is an open source implementation of our proposed methods Prototype Mixture R-CNN for Few-Shot Object Detection. This repo is built upon [Attention RPN](https://github.com/fanq15/FewX) and based on Detectron2. 
 
 ## Requirements
 ```
@@ -51,6 +51,7 @@ Evaluation is conducted on the test set of COCO val2017.
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python3 fsod_train_net.py --num-gpus 4 --config-file configs/PMMv2/finetune_R_101.yaml --eval-only MODEL.WEIGHTS ./output/pmmv2/R_101/model_final.pth
 ```
+Here is the [model_final.pth](https://drive.google.com/drive/folders/1CpJV0P6uETSGDM_BYZ0mAPetDGZ97LzS?usp=sharing) and put it into PMR-CNN/output.
 
 ## Results on MS COCO 2017
 We get the following result below:
